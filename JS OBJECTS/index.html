@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demos"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <script>
+        //Object Literal Notation:
+        let person ={
+            name : "John",
+            age:30,
+            isEmployed:true,
+            greet: function(){
+                console.log("Hello!");
+            }
+        };
+        document.getElementById("demo").innerHTML = person.name+"<br>"+person.age;
+
+        // Using the new keyword with Object Constructor:
+       let persons = new Object();
+       persons.name = "john";
+       persons.age =30;
+       persons.isEmployed = true;
+       persons.greet = function(){
+       console.log("hello hi");
+       console.log(persons.name);
+       console.log(persons.age);
+       };
+      document.getElementById("demos").innerHTML = persons.name+"<br>"+persons.age+"<br>"+persons.isEmployed;
+
+      //JavaScript for...in Loop
+      const personn ={
+         fname:"John",
+         lname:"Doe",
+         age:25
+      };
+      let txt = "";
+      for(let x in personn){
+        txt+=personn[x]+"";
+      }
+      console.log(txt);
+      document.getElementById("demo1").innerHTML =txt;
+        
+    //  Adding New Properties
+    const person1 ={
+     firstname:"Deepika",
+     lastname:"Anbalagan",
+     age:27,
+     eyecolor:"blue"
+    };
+    person1.nationality="Indian";
+    // Deleting object properties.
+    delete person1.age;
+    document.getElementById("demo2").innerHTML = person1.firstname + " is " + person1.nationality + " "+person1.eyecolor +" "+person1.age;
+
+    //nested objects
+    const myObj ={
+        name:"Deepika",
+        age:30,
+        cars:{
+            car1:"Ford",
+            car2:"BMW",
+            car3:"Fiat"
+        }
+    }
+    document.getElementById("demo3").innerHTML=myObj.cars.car2+" ,"+myObj.cars.car1;
+
+    // Object Methods
+    const employee={
+        firstname :"Deepika",
+        lastname : "Anbalagan",
+        id:5566,
+        fullName : function(){
+          return this.firstname+ " "+ this.lastname;
+        }
+    };
+    document.getElementById("demo4").innerHTML=employee.fullName();
+    
+    //Using JSON.stringify()
+    const person2 ={
+        name:"Deepika",
+        age:30,
+        city:"New York"
+    };
+    document.getElementById("demo5").innerHTML = JSON.stringify(person2);
+
+    const person3={
+        firstname:"john",
+        lastname:"Doe",
+        language:"en",
+        get lang(){
+            return this.language;
+        }
+    };
+    document.getElementById("demo6").innerHTML = person3.lang;
+
+    //JavaScript Getters and Setters
+    const person4 = {
+        firstname: "John",
+        lastname : "Doe",
+        language:"NO",
+        set lang(value){
+            this.language = value ;
+        }
+    };
+    //set a property using set
+    person4.lang = "en";
+    //display data from the object
+    document.getElementById("demo7").innerHTML=person4.language;
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="window.alert('Page successfully loaded');">
+  
+    <form>  
+        <input type="button" onclick="clickevent()" value="Who's this?"/>  
+        </form>  
+    <p onmouseover="mouseoverevent()"> Keep cursor over me</p>  
+    <!-- //Focus Event -->
+     <input type="text" id="input1" onfocus="focusevent()">
+      <br>
+      <!-- //Keydown Event -->
+     <input type="text" id="input2" onkeydown="keydownevent()">
+   <script>
+    //Click Event
+       function clickevent()  
+    {  
+        document.write("This is JavaTpoint");  
+    }  
+
+    //MouseOver Event
+    // function mouseoverevent()  
+    // {  
+    //     alert("This is JavaTpoint");  
+    // }  
+
+
+    //Focus Event
+    function focusevent(){
+        document.getElementById("input1").style.background="aqua";
+    }
+
+    //Keydown Event
+    function keydownevent(){
+        document.getElementById("input2");
+        alert("press a key")
+    }
+
+    //Load event
+    document.write("the page is loaded successfully");
+    </script>
+</body>
+</html>

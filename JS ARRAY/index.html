@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        //Array
+        const cars = ["Saab","Volvo","BMW"];
+        document.getElementById("demo").innerHTML = cars;
+        
+        //create an array
+        const car = [];
+        car[0] = "Saab";
+        car[1] = "Volvo";
+        car[2] = "BMW";
+        document.getElementById("demo1").innerHTML =car;
+
+        //Accessing Array Elements
+        const car1 = ["Saab", "Volvo", "BMW"];
+        document.getElementById("demo2").innerHTML = car1[0];
+
+         //creating Arrays
+         let fruits = new Array("apple","banna","orange");
+         let emptyArray = [];
+         fruits[1] = "grape"; //Modifying Array Elements:
+         console.log(fruits[0]); // Output: "apple"
+         console.log(fruits[1]);
+         
+         //Array Methods
+         //1.push()
+         let fruits1 = new Array("apple","banna","orange");
+         fruits1.push("mango");
+         console.log(fruits1); 
+
+        //2.Pop()
+        let fruits2 = new Array("apple","banna","orange");
+        let lastFruiṭ = fruits2.pop();
+         console.log(fruits2); 
+         console.log(lastFruiṭ);
+         //3.shift()
+         let fruits3 = new Array("apple","banna","orange");
+         let FirstFruiṭ = fruits3.shift();
+         console.log(FirstFruiṭ);
+         console.log(fruits3);
+
+         //4.unshift
+         let fruits4 = new Array("avacado","pomoganate","dragon","kiwi");
+        fruits4.unshift("butterfruit","guva");
+         console.log(fruits4);
+
+         //5.slice(start, end)
+         let fruits5 = new Array("pears","grapes","Papaya","pomoganate");
+         let slicedFruits = fruits5.slice(1, 5);
+        console.log(slicedFruits); 
+
+        //JavaScript Sorting Arrays
+        let fruit6 = ["grape", "orange", "banana", "apple"];
+        fruit6.sort();
+        console.log(fruit6);
+        
+        //Ascending Order:
+        let numbers = [10, 5, 8, 1, 7,40];
+        numbers.sort(function(a, b) {
+         return a - b;
+         });
+        console.log(numbers); // Output: [1, 5, 7, 8, 10]
+ 
+
+        let people = [
+    { name: "Alice", age: 30 },
+    { name: "Bob", age: 25 },
+    { name: "Charlie", age: 35 }
+];
+
+// Sorting Arrays of Objects:
+// Sorting based on the 'age' property in ascending order
+people.sort(function(a, b) {
+    return a.age - b.age;
+});
+console.log(people);
+
+//looping an Array
+const myJSON ='{"name":"john","age":30,"carss":["Ford","BMW","Fiat"]}';
+const myObj = JSON.parse(myJSON);
+let text = "";
+for(let i=0;i<myObj.carss.length;i++){
+    text += myObj.carss[i]+", ";
+}
+document.getElementById("demo3").innerHTML = text;
+  
+//Array Map()
+const numberr = [1,2,3,4,5];
+const squaredNumbers = numberr.map(function(num){
+    return num * num;
+});
+console.log(squaredNumbers);
+
+//array map using arrow function
+const numbering =[1,2,3,4,5];
+/// Using map() with arrow function to square each number in the array
+const squaredNumbering = numbering.map(num => num * num);
+console.log(squaredNumbering);
+  </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- //function  -->
+    <h1>Javascript Functions</h1>
+    <p id="demo"></p>
+    <p id="demos"></p>
+    <p id="demo1"></p>
+    <p id="dem"></p>
+    <p id="greet"></p>
+    <p id="greets"></p>
+    <p id="nums"></p>
+    <p id="democ"></p>
+    <p id="demo2"></p>
+    <p id="demom"></p>
+    <script>
+        //Function Declarations
+        let x= myFunction(4,3);
+        document.getElementById('demo').innerHTML=x;
+        function myFunction(a,b){
+        return a * b;
+        }
+ 
+      //Function Expressions
+        const x1 = function(a,b) {
+        return  a * b
+        }
+        document.getElementById("demos").innerHTML=x1;
+  
+    // JavaScript has an built-in function constructor
+        // const myFunction = new Function("a1", "b1", "return a1 * b1");
+        // document.getElementById("demo1").innerHTML = myFunction(4, 3);
+
+       //CONCADINATION
+       let name ="Deepika";
+       let msg = "Hello!!!" + name + "I'm  learning Javascript";
+       document.getElementById("dem").innerHTML=msg;
+
+       //FUNCTIONS
+        function greetUser(){
+            //set of statement
+        let names = "Liyashree";
+        let msgs = "Hello!!!!" + names + "I'm Learing Javascript!";
+        document.getElementById("greet").innerHTML=msgs;
+        console.log(msgs);
+          }
+          greetUser();
+ 
+          //FUNCTION PARAMETER1
+          function greetUsers(firstname,lastname){
+            let msg1="hello" + firstname + ""+ lastname + "I'm learning Javascript";
+            console.log(msg1);
+          }
+                   greetUsers("Deepika","Anbalagan");
+         greetUsers("Liyashree","Santhanakrishnan");
+
+         //ADD
+          function add(number1, number2){
+ 
+            console.log(number1 + number2)
+          }
+          add(45,55);
+
+         function myFunction(aa,bb){
+            return aa * bb;
+         }
+         document.getElementById("democ").innerHTML = myFunction(10,2);
+
+         //
+         const myObject ={
+            firstName:"john",
+            lastName:"Doe",
+            FullName:function(){
+                return this.firstName+" "+this.lastName;
+            }
+         }
+         document.getElementById("demo2").myObject.firstName();
+    
+          //FUNCTION PARAMETER2
+          function myFunctions(x,y){
+            if(y===undefined){
+              y=2;
+            }
+            return x*y;
+          }
+document.getElementById("demom").innerHTML = myFunctions(4);
+    </script>
+    
+</body>
+</html>

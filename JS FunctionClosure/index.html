@@ -1,0 +1,26 @@
+<p id="demo"></p>
+<script>
+    //Function Parameters
+    function myFunction(x,y){
+        if(y==x){
+            y=2;
+        }
+        return x*y;
+    }
+    document.getElementById("demo").innerHTML=myFunction(3);
+ 
+  //function call
+  const person ={
+    fullName :function(){
+        return this.firstName + " " + this.lastName;
+    }
+  }
+  const person1 ={
+    firstName:"John",
+    lastName:"Doe"
+  }
+  const person2 = {
+    firstName:"Marry",
+    lastName:"Doe"
+  }
+</script>
